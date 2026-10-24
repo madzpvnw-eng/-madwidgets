@@ -149,14 +149,15 @@ function copyNotionEmbedUrl() {
 // TOOLBAR ENHANCER
 // ==========================================
 function enhanceToolbar() {
-    const isInsideIframe = window.self !== window.top;
+    const toolbar = document.querySelector(".widget-toolbar");
+    // Only proceed on widget pages that have a toolbar
+    if (!toolbar) return;
+
     const urlParams = new URLSearchParams(window.location.search);
-    if (isInsideIframe || urlParams.get("embed") === "true") {
+    // Only activate embed mode if explicitly passed embed=true in URL
+    if (urlParams.get("embed") === "true") {
         document.body.classList.add("is-embedded");
     }
-
-    const toolbar = document.querySelector(".widget-toolbar");
-    if (!toolbar) return;
 
     // Check if we need to add the Copy Embed button
     if (!toolbar.querySelector(".copy-embed-btn")) {
@@ -184,8 +185,12 @@ function enhanceToolbar() {
     }
 
     const backLink = toolbar.querySelector("a");
-    if (backLink && !backLink.classList.contains("toolbar-btn")) {
-        backLink.classList.add("toolbar-btn");
+    if (backLink) {
+        if (!backLink.classList.contains("toolbar-btn")) backLink.classList.add("toolbar-btn");
+        backLink.title = "Return to MadWidgets";
+        backLink.innerHTML = window.lucide 
+            ? `<i data-lucide="arrow-left"></i><span class="label-text">Widgets</span>`
+            : `← <span class="label-text">Widgets</span>`;
     }
 
     if (window.lucide && typeof window.lucide.createIcons === "function") {
