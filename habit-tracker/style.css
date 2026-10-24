@@ -1,0 +1,211 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--bg);
+}
+
+.habit-container {
+    width: 100%;
+    max-width: 440px;
+}
+
+.habit-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px 24px;
+    box-shadow: var(--shadow);
+    transition: all var(--transition);
+}
+
+.habit-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-lg);
+}
+
+.habit-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+}
+
+.habit-title {
+    font-family: "Plus Jakarta Sans", "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    margin: 0;
+}
+
+.habit-subtitle {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    display: block;
+    margin-top: 3px;
+}
+
+.streak-badge {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    background: var(--danger-soft);
+    color: var(--danger);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.streak-badge svg {
+    width: 14px;
+    height: 14px;
+}
+
+.habit-progress-bar {
+    height: 6px;
+    background: var(--surface-subtle);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.habit-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--text);
+    border-radius: var(--radius-full);
+    transition: width 0.3s ease;
+}
+
+/* Header Row */
+.days-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4px 8px;
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 12px;
+}
+
+.habit-name-col {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+}
+
+.days-cols {
+    display: flex;
+    gap: 8px;
+}
+
+.days-cols span {
+    width: 28px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.days-cols span.today {
+    color: var(--text);
+    font-weight: 800;
+}
+
+/* Habit Rows */
+.habits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.habit-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 4px;
+    border-radius: var(--radius-sm);
+    transition: background var(--transition-fast);
+}
+
+.habit-row:hover {
+    background: var(--surface-subtle);
+}
+
+.habit-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    cursor: pointer;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 8px;
+}
+
+.habit-checks {
+    display: flex;
+    gap: 8px;
+}
+
+.check-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    display: grid;
+    place-items: center;
+    transition: all var(--transition-fast);
+}
+
+.check-btn:hover {
+    border-color: var(--text-secondary);
+    transform: scale(1.05);
+}
+
+.check-btn.checked {
+    background: var(--text);
+    border-color: var(--text);
+    color: var(--bg);
+}
+
+.check-btn.checked svg {
+    width: 14px;
+    height: 14px;
+    stroke-width: 3;
+}
+
+.habit-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.action-link {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text);
+    padding: 4px 0;
+    transition: opacity var(--transition-fast);
+}
+
+.action-link:hover {
+    opacity: 0.75;
+}
+
+.action-link.muted {
+    color: var(--text-muted);
+    font-weight: 600;
+}

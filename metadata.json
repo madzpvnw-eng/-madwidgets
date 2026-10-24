@@ -1,0 +1,8 @@
+{
+  "name": "MadWidgets — Notion Widgets",
+  "description": "Simple, useful widgets designed for your Notion workspace.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Focus — Notion Widget</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="widget-toolbar">
+        <div class="widget-toolbar-left">
+            <a href="../index.html" class="toolbar-btn">← MadWidgets</a>
+        </div>
+        <div class="widget-toolbar-right">
+            <button class="toolbar-btn copy-embed-btn" onclick="copyNotionEmbedUrl()">
+                <i data-lucide="share-2"></i>
+                <span class="label-text">Copy Embed</span>
+            </button>
+            <button id="theme-toggle" class="toolbar-btn theme-toggle" aria-label="Switch theme">☾</button>
+        </div>
+    </div>
+
+    <main class="pomodoro-container">
+        <div class="pomodoro-card">
+            <!-- Mode Segmented Control -->
+            <div class="mode-tabs">
+                <button class="mode-btn active" data-mode="focus" data-time="25">Focus</button>
+                <button class="mode-btn" data-mode="short" data-time="5">Short Break</button>
+                <button class="mode-btn" data-mode="long" data-time="15">Long Break</button>
+            </div>
+
+            <!-- Circular Timer Display -->
+            <div class="timer-ring-wrapper">
+                <svg class="timer-svg" viewBox="0 0 240 240">
+                    <circle class="ring-bg" cx="120" cy="120" r="102" />
+                    <circle id="ring-progress" class="ring-fill" cx="120" cy="120" r="102" />
+                </svg>
+                <div class="timer-inner">
+                    <span id="session-label" class="session-label">Focus Session</span>
+                    <div id="timer" class="timer-digits">25:00</div>
+                    <div class="session-dots" id="session-dots" title="Completed sessions">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls-row">
+                <button id="adjust-minus" class="action-btn secondary" title="Decrease 1 min" aria-label="Decrease time">
+                    <i data-lucide="minus"></i>
+                </button>
+                <button id="start-pause-btn" class="action-btn primary" aria-label="Start or Pause Timer">
+                    <i data-lucide="play" id="play-icon"></i>
+                    <span id="start-label">Start Focus</span>
+                </button>
+                <button id="reset-btn" class="action-btn secondary" title="Reset" aria-label="Reset timer">
+                    <i data-lucide="rotate-ccw"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="../assets/js/theme.js"></script>
+</body>
+</html>

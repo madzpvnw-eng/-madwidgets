@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Text Case Converter — Notion Widget</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="widget-toolbar">
+        <div class="widget-toolbar-left">
+            <a href="../index.html" class="toolbar-btn">← MadWidgets</a>
+        </div>
+        <div class="widget-toolbar-right">
+            <button class="toolbar-btn copy-embed-btn" onclick="copyNotionEmbedUrl()">
+                <i data-lucide="share-2"></i>
+                <span class="label-text">Copy Embed</span>
+            </button>
+            <button id="theme-toggle" class="toolbar-btn theme-toggle" aria-label="Switch theme">☾</button>
+        </div>
+    </div>
+
+    <main class="case-container">
+        <div class="case-card">
+            <div class="case-head">
+                <div>
+                    <h1 class="case-title">Text Case Converter</h1>
+                    <span class="case-sub">Transform titles, code identifiers, and notes</span>
+                </div>
+                <button type="button" id="copy-result-btn" class="copy-btn">
+                    <i data-lucide="copy"></i>
+                    <span>Copy</span>
+                </button>
+            </div>
+
+            <textarea id="text" class="case-textarea" placeholder="Paste or type text to convert..."></textarea>
+
+            <div class="case-buttons-grid">
+                <button type="button" class="case-btn" data-mode="title">Title Case</button>
+                <button type="button" class="case-btn" data-mode="upper">UPPERCASE</button>
+                <button type="button" class="case-btn" data-mode="lower">lowercase</button>
+                <button type="button" class="case-btn" data-mode="sentence">Sentence case</button>
+                <button type="button" class="case-btn" data-mode="camel">camelCase</button>
+                <button type="button" class="case-btn" data-mode="snake">snake_case</button>
+                <button type="button" class="case-btn" data-mode="kebab">kebab-case</button>
+                <button type="button" class="case-btn secondary" id="clear-btn">Clear</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="../assets/js/theme.js"></script>
+</body>
+</html>

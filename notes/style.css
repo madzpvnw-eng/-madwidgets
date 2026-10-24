@@ -1,0 +1,140 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--bg);
+}
+
+.notes-container {
+    width: 100%;
+    max-width: 440px;
+}
+
+.notes-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px 20px;
+    box-shadow: var(--shadow);
+    transition: all var(--transition);
+}
+
+.notes-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-lg);
+}
+
+.notes-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.notes-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.notes-title-wrap svg {
+    width: 18px;
+    height: 18px;
+    color: var(--text-secondary);
+}
+
+.notes-title {
+    font-family: "Plus Jakarta Sans", "Manrope", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    margin: 0;
+}
+
+.notes-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.icon-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    background: var(--surface-subtle);
+    border: 1px solid var(--border-subtle);
+    display: grid;
+    place-items: center;
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.icon-btn:hover {
+    background: var(--hover);
+    color: var(--text);
+    border-color: var(--border-hover);
+}
+
+.icon-btn svg {
+    width: 14px;
+    height: 14px;
+}
+
+.notes-textarea {
+    width: 100%;
+    min-height: 180px;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 14px;
+    background: var(--surface-subtle);
+    color: var(--text);
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    resize: vertical;
+    outline: none;
+    transition: all var(--transition-fast);
+}
+
+.notes-textarea:focus {
+    border-color: var(--text);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+}
+
+.notes-textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.notes-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-subtle);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.save-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.save-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--success);
+}
+
+.word-stats {
+    display: flex;
+    gap: 6px;
+    font-variant-numeric: tabular-nums;
+}

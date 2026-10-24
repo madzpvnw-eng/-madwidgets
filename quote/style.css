@@ -1,0 +1,110 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--bg);
+}
+
+.quote-container {
+    width: 100%;
+    max-width: 440px;
+}
+
+.quote-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    box-shadow: var(--shadow);
+    transition: all var(--transition);
+}
+
+.quote-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-lg);
+}
+
+.quote-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.quote-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+}
+
+.quote-tag svg {
+    width: 14px;
+    height: 14px;
+    color: var(--accent);
+}
+
+.quote-controls {
+    display: flex;
+    gap: 6px;
+}
+
+.icon-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    background: var(--surface-subtle);
+    border: 1px solid var(--border-subtle);
+    display: grid;
+    place-items: center;
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.icon-btn:hover {
+    background: var(--hover);
+    color: var(--text);
+    border-color: var(--border-hover);
+    transform: translateY(-1px);
+}
+
+.icon-btn svg {
+    width: 15px;
+    height: 15px;
+}
+
+.quote-content {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.quote-content.fade-out {
+    opacity: 0;
+    transform: translateY(4px);
+}
+
+.quote-text {
+    font-family: "Newsreader", Georgia, serif;
+    font-style: italic;
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--text);
+    margin: 0 0 16px;
+    letter-spacing: -0.01em;
+}
+
+.quote-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.quote-author {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 0.02em;
+}

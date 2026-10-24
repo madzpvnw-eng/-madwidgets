@@ -1,0 +1,164 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--bg);
+}
+
+.life-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.life-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px 20px;
+    box-shadow: var(--shadow);
+    transition: all var(--transition);
+}
+
+.life-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-lg);
+}
+
+.progress-section {
+    margin-bottom: 22px;
+}
+
+.life-section {
+    padding-top: 18px;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.section-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.section-label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+}
+
+.pct-text {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+}
+
+.prog-bar {
+    height: 8px;
+    background: var(--surface-subtle);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin-bottom: 8px;
+    border: 1px solid var(--border-subtle);
+}
+
+.prog-fill {
+    height: 100%;
+    background: var(--text);
+    border-radius: var(--radius-full);
+    transition: width 0.4s ease;
+}
+
+.meta-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Birthday Details */
+.birthday-details {
+    padding-top: 16px;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.birthday-summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+}
+
+.birthday-summary::-webkit-details-marker {
+    display: none;
+}
+
+.birthday-summary svg {
+    width: 14px;
+    height: 14px;
+}
+
+.birthday-summary:hover {
+    color: var(--text);
+}
+
+.birthday-form {
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-row label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.form-row input {
+    height: 38px;
+    padding: 0 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--surface-subtle);
+    color: var(--text);
+    font-size: 13px;
+    outline: none;
+}
+
+.form-row input:focus {
+    border-color: var(--text);
+    background: var(--surface);
+}
+
+.save-btn {
+    height: 38px;
+    background: var(--text);
+    color: var(--bg);
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 4px;
+    transition: all var(--transition-fast);
+}
+
+.save-btn:hover {
+    opacity: 0.92;
+}

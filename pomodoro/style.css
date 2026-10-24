@@ -1,0 +1,203 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--bg);
+}
+
+.pomodoro-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.pomodoro-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px 32px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all var(--transition);
+}
+
+.pomodoro-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Mode Tabs */
+.mode-tabs {
+    display: flex;
+    background: var(--surface-subtle);
+    padding: 4px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-subtle);
+    width: 100%;
+    max-width: 330px;
+    margin-bottom: 24px;
+}
+
+.mode-btn {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-fast);
+}
+
+.mode-btn:hover {
+    color: var(--text);
+}
+
+.mode-btn.active {
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: var(--shadow-sm);
+}
+
+/* SVG Timer Ring */
+.timer-ring-wrapper {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.timer-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.ring-bg {
+    fill: none;
+    stroke: var(--surface-subtle);
+    stroke-width: 8;
+}
+
+.ring-fill {
+    fill: none;
+    stroke: var(--text);
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 640.88;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.5s ease, stroke var(--transition);
+}
+
+.timer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.session-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.timer-digits {
+    font-family: "Plus Jakarta Sans", "Manrope", sans-serif;
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    font-variant-numeric: tabular-nums;
+    color: var(--text);
+}
+
+.session-dots {
+    display: flex;
+    gap: 6px;
+    margin-top: 14px;
+}
+
+.session-dots .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--surface-subtle);
+    border: 1px solid var(--border);
+    transition: all var(--transition-fast);
+}
+
+.session-dots .dot.active {
+    background: var(--text);
+    border-color: var(--text);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Controls */
+.controls-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 46px;
+    border-radius: var(--radius);
+    font-size: 14px;
+    font-weight: 700;
+    transition: all var(--transition-fast);
+}
+
+.action-btn.primary {
+    flex: 1;
+    background: var(--text);
+    color: var(--bg);
+}
+
+.action-btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+    opacity: 0.95;
+}
+
+.action-btn.primary:active {
+    transform: translateY(0);
+}
+
+.action-btn.secondary {
+    width: 46px;
+    background: var(--surface-subtle);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.action-btn.secondary:hover {
+    background: var(--hover);
+    border-color: var(--border-hover);
+    transform: translateY(-1px);
+}
+
+.action-btn svg {
+    width: 18px;
+    height: 18px;
+}

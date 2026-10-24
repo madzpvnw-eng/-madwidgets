@@ -1,0 +1,140 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--bg);
+}
+
+.clock-container {
+    width: 100%;
+    max-width: 440px;
+}
+
+.clock-card {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px 36px 28px;
+    box-shadow: var(--shadow);
+    transition: all var(--transition);
+    overflow: hidden;
+}
+
+.clock-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-lg);
+}
+
+.clock-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.greeting-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: -0.01em;
+}
+
+.greeting-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent);
+}
+
+.clock-options {
+    display: flex;
+    gap: 6px;
+}
+
+.pill-btn {
+    padding: 4px 9px;
+    border-radius: var(--radius-sm);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    background: var(--surface-subtle);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.pill-btn:hover {
+    color: var(--text);
+    border-color: var(--border-hover);
+}
+
+.pill-btn.active {
+    background: var(--text);
+    color: var(--bg);
+    border-color: var(--text);
+}
+
+.time-wrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+}
+
+.time-display {
+    font-family: "Plus Jakarta Sans", "Manrope", sans-serif;
+    font-size: clamp(48px, 12vw, 68px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+}
+
+.ampm-badge {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+    padding-bottom: 4px;
+}
+
+.date-display {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: -0.01em;
+}
+
+.minute-progress-bar {
+    height: 4px;
+    width: 100%;
+    background: var(--surface-subtle);
+    border-radius: var(--radius-full);
+    margin-top: 24px;
+    overflow: hidden;
+}
+
+.minute-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--text);
+    border-radius: var(--radius-full);
+    transition: width 1s linear;
+}
+
+@media (max-width: 480px) {
+    .clock-card {
+        padding: 24px 20px 20px;
+    }
+}

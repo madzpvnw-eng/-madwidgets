@@ -1,0 +1,14 @@
+{
+  "name": "madwidgets",
+  "version": "1.0.0",
+  "description": "Simple, useful widgets designed for your Notion workspace.",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "node -e \"console.log('Build complete')\""
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

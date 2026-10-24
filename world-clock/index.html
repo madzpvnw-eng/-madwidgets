@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock — Notion Widget</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="widget-toolbar">
+        <div class="widget-toolbar-left">
+            <a href="../index.html" class="toolbar-btn">← MadWidgets</a>
+        </div>
+        <div class="widget-toolbar-right">
+            <button class="toolbar-btn copy-embed-btn" onclick="copyNotionEmbedUrl()">
+                <i data-lucide="share-2"></i>
+                <span class="label-text">Copy Embed</span>
+            </button>
+            <button id="theme-toggle" class="toolbar-btn theme-toggle" aria-label="Switch theme">☾</button>
+        </div>
+    </div>
+
+    <main class="world-container">
+        <div class="world-card">
+            <div class="world-head">
+                <div>
+                    <h1 class="world-title">World Clocks</h1>
+                    <span class="world-subtitle">Global time comparison</span>
+                </div>
+                <button type="button" id="add-city-btn" class="add-city-btn">+ City</button>
+            </div>
+
+            <div id="clocks" class="clocks-grid"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="../assets/js/theme.js"></script>
+</body>
+</html>

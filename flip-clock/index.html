@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Flip Clock — Notion Widget</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="widget-toolbar">
+        <div class="widget-toolbar-left">
+            <a href="../index.html" class="toolbar-btn">← MadWidgets</a>
+        </div>
+        <div class="widget-toolbar-right">
+            <button class="toolbar-btn copy-embed-btn" onclick="copyNotionEmbedUrl()">
+                <i data-lucide="share-2"></i>
+                <span class="label-text">Copy Embed</span>
+            </button>
+            <button id="theme-toggle" class="toolbar-btn theme-toggle" aria-label="Switch theme">☾</button>
+        </div>
+    </div>
+
+    <main class="flip-clock-wrapper">
+        <div class="flip-clock-card">
+            <div class="flip-header">
+                <span class="brand-tag">FLIP CLOCK</span>
+                <div class="flip-options">
+                    <button id="ampm-toggle" class="flip-btn">24H</button>
+                    <button id="sec-toggle" class="flip-btn active">SEC</button>
+                </div>
+            </div>
+
+            <div class="flip-stage">
+                <!-- Hours -->
+                <div class="flip-unit">
+                    <div class="flip-flap" id="hours-flap">
+                        <div class="flap-half flap-top"><span id="hours-top">00</span></div>
+                        <div class="flap-half flap-bottom"><span id="hours-bottom">00</span></div>
+                        <div class="flap-divider"></div>
+                    </div>
+                    <span class="unit-label">HOURS</span>
+                </div>
+
+                <div class="flip-dots">:</div>
+
+                <!-- Minutes -->
+                <div class="flip-unit">
+                    <div class="flip-flap" id="minutes-flap">
+                        <div class="flap-half flap-top"><span id="minutes-top">00</span></div>
+                        <div class="flap-half flap-bottom"><span id="minutes-bottom">00</span></div>
+                        <div class="flap-divider"></div>
+                    </div>
+                    <span class="unit-label">MINUTES</span>
+                </div>
+
+                <div class="flip-dots" id="sec-dots">:</div>
+
+                <!-- Seconds -->
+                <div class="flip-unit" id="sec-unit">
+                    <div class="flip-flap" id="seconds-flap">
+                        <div class="flap-half flap-top"><span id="seconds-top">00</span></div>
+                        <div class="flap-half flap-bottom"><span id="seconds-bottom">00</span></div>
+                        <div class="flap-divider"></div>
+                    </div>
+                    <span class="unit-label">SECONDS</span>
+                </div>
+            </div>
+
+            <div class="flip-footer">
+                <span id="flip-ampm" class="ampm-indicator" hidden>AM</span>
+                <span id="flip-date" class="flip-date">Monday, 24 October 2026</span>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="../assets/js/theme.js"></script>
+</body>
+</html>

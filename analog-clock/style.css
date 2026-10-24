@@ -1,0 +1,149 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--bg);
+}
+
+.analog-container {
+    width: 100%;
+    max-width: 380px;
+}
+
+.analog-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px 24px 28px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all var(--transition);
+}
+
+.analog-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-lg);
+}
+
+.clock-face {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: var(--surface-subtle);
+    border: 2px solid var(--border);
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 24px;
+}
+
+.dial-marks {
+    position: absolute;
+    inset: 0;
+}
+
+.notch {
+    position: absolute;
+    left: calc(50% - 1px);
+    top: 8px;
+    width: 2px;
+    height: 8px;
+    background: var(--text-muted);
+    transform-origin: 1px 102px;
+    border-radius: 1px;
+}
+
+.notch.major {
+    width: 3px;
+    height: 12px;
+    left: calc(50% - 1.5px);
+    background: var(--text);
+    border-radius: 2px;
+}
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    border-radius: 4px;
+    transition: transform 0.1s cubic-bezier(0.4, 2, 0.55, 0.44);
+}
+
+.hand.hour {
+    width: 4px;
+    height: 60px;
+    margin-left: -2px;
+    background: var(--text);
+    z-index: 2;
+}
+
+.hand.minute {
+    width: 3px;
+    height: 82px;
+    margin-left: -1.5px;
+    background: var(--text);
+    z-index: 3;
+}
+
+.hand.second {
+    width: 1.5px;
+    height: 94px;
+    margin-left: -0.75px;
+    background: var(--danger);
+    z-index: 4;
+    transition: transform 0.05s linear;
+}
+
+.hand.second::after {
+    content: "";
+    position: absolute;
+    bottom: -18px;
+    left: -1.25px;
+    width: 4px;
+    height: 18px;
+    background: var(--danger);
+    border-radius: 2px;
+}
+
+.center-cap {
+    position: absolute;
+    top: calc(50% - 6px);
+    left: calc(50% - 6px);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--text);
+    border: 2px solid var(--surface);
+    z-index: 5;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.analog-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.digital-pill {
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    background: var(--surface-subtle);
+    border: 1px solid var(--border);
+    font-family: "Plus Jakarta Sans", "Manrope", sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+    color: var(--text);
+}
+
+.date-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}

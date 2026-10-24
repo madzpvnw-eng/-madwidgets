@@ -1,0 +1,138 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--bg);
+}
+
+.world-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+.world-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    box-shadow: var(--shadow);
+    transition: all var(--transition);
+}
+
+.world-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-lg);
+}
+
+.world-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.world-title {
+    font-family: "Plus Jakarta Sans", "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    margin: 0;
+}
+
+.world-subtitle {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    display: block;
+    margin-top: 2px;
+}
+
+.add-city-btn {
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    background: var(--surface-subtle);
+    border: 1px solid var(--border);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.add-city-btn:hover {
+    background: var(--hover);
+    color: var(--text);
+}
+
+.clocks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.clock-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    background: var(--surface-subtle);
+    transition: all var(--transition-fast);
+}
+
+.clock-row:hover {
+    border-color: var(--border-hover);
+    background: var(--surface);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.clock-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.daynight-icon {
+    font-size: 16px;
+}
+
+.city-info strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.city-info small {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-top: 2px;
+}
+
+.clock-right {
+    text-align: right;
+}
+
+.time-str {
+    display: block;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+}
+
+.diff-str {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-top: 4px;
+}

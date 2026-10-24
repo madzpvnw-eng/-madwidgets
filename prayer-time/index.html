@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Time — Notion Widget</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="widget-toolbar">
+        <div class="widget-toolbar-left">
+            <a href="../index.html" class="toolbar-btn">← MadWidgets</a>
+        </div>
+        <div class="widget-toolbar-right">
+            <button class="toolbar-btn copy-embed-btn" onclick="copyNotionEmbedUrl()">
+                <i data-lucide="share-2"></i>
+                <span class="label-text">Copy Embed</span>
+            </button>
+            <button id="theme-toggle" class="toolbar-btn theme-toggle" aria-label="Switch theme">☾</button>
+        </div>
+    </div>
+
+    <main class="prayer-container">
+        <div class="prayer-card">
+            <!-- Header -->
+            <div class="prayer-head">
+                <div class="prayer-badge">
+                    <i data-lucide="moon-star"></i>
+                    <span id="location-text">Jakarta, ID</span>
+                </div>
+                <button type="button" id="change-loc-btn" class="change-city-btn" title="Change City">
+                    <i data-lucide="map-pin"></i>
+                </button>
+            </div>
+
+            <div id="hijri-date" class="hijri-text">Loading Islamic date...</div>
+
+            <!-- Next Prayer Hero -->
+            <div class="next-prayer-banner">
+                <span class="next-label">UPCOMING PRAYER</span>
+                <div class="next-highlight-row">
+                    <h2 id="next-prayer-name" class="next-prayer-name">Asr</h2>
+                    <span id="next-prayer-time" class="next-prayer-time">15:12</span>
+                </div>
+                <div id="countdown-text" class="next-countdown">in 42 minutes</div>
+            </div>
+
+            <!-- Daily Prayers 5 Items -->
+            <div class="prayers-list">
+                <div class="prayer-row" id="row-fajr">
+                    <span class="prayer-name">Fajr</span>
+                    <strong class="prayer-time" id="time-fajr">04:30</strong>
+                </div>
+                <div class="prayer-row" id="row-dhuhr">
+                    <span class="prayer-name">Dhuhr</span>
+                    <strong class="prayer-time" id="time-dhuhr">11:58</strong>
+                </div>
+                <div class="prayer-row" id="row-asr">
+                    <span class="prayer-name">Asr</span>
+                    <strong class="prayer-time" id="time-asr">15:12</strong>
+                </div>
+                <div class="prayer-row" id="row-maghrib">
+                    <span class="prayer-name">Maghrib</span>
+                    <strong class="prayer-time" id="time-maghrib">18:04</strong>
+                </div>
+                <div class="prayer-row" id="row-isha">
+                    <span class="prayer-name">Isha</span>
+                    <strong class="prayer-time" id="time-isha">19:15</strong>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="../assets/js/theme.js"></script>
+</body>
+</html>

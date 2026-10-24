@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Countdown — Notion Widget</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="widget-toolbar">
+        <div class="widget-toolbar-left">
+            <a href="../index.html" class="toolbar-btn">← MadWidgets</a>
+        </div>
+        <div class="widget-toolbar-right">
+            <button class="toolbar-btn copy-embed-btn" onclick="copyNotionEmbedUrl()">
+                <i data-lucide="share-2"></i>
+                <span class="label-text">Copy Embed</span>
+            </button>
+            <button id="theme-toggle" class="toolbar-btn theme-toggle" aria-label="Switch theme">☾</button>
+        </div>
+    </div>
+
+    <main class="countdown-container">
+        <div class="countdown-card">
+            <!-- Header & Event Title -->
+            <div class="countdown-head">
+                <div class="event-badge">
+                    <i data-lucide="sparkles"></i>
+                    <span id="event-badge-text">UPCOMING EVENT</span>
+                </div>
+                <h1 id="event-title" class="event-title">New Year Celebration</h1>
+            </div>
+
+            <!-- Countdown Cards -->
+            <div class="countdown-grid">
+                <div class="time-block">
+                    <span id="days" class="number">00</span>
+                    <span class="label">DAYS</span>
+                </div>
+                <div class="time-block">
+                    <span id="hours" class="number">00</span>
+                    <span class="label">HOURS</span>
+                </div>
+                <div class="time-block">
+                    <span id="minutes" class="number">00</span>
+                    <span class="label">MINS</span>
+                </div>
+                <div class="time-block">
+                    <span id="seconds" class="number">00</span>
+                    <span class="label">SECS</span>
+                </div>
+            </div>
+
+            <!-- Edit / Config Toggle -->
+            <details class="config-details">
+                <summary class="config-summary">
+                    <i data-lucide="sliders-horizontal"></i>
+                    <span>Customize Event</span>
+                </summary>
+                <div class="config-body">
+                    <div class="field">
+                        <label for="event-input">Event Name</label>
+                        <input type="text" id="event-input" placeholder="e.g. Project Launch, Trip to Japan">
+                    </div>
+                    <div class="row-fields">
+                        <div class="field">
+                            <label for="date-input">Target Date</label>
+                            <input type="date" id="date-input">
+                        </div>
+                        <div class="field">
+                            <label for="time-input">Target Time</label>
+                            <input type="time" id="time-input" value="00:00">
+                        </div>
+                    </div>
+                    <div class="presets-row">
+                        <span class="preset-label">Quick Presets:</span>
+                        <button type="button" class="preset-btn" data-days="7">Next Week</button>
+                        <button type="button" class="preset-btn" data-days="30">30 Days</button>
+                        <button type="button" class="preset-btn" data-preset="newyear">New Year 2027</button>
+                    </div>
+                    <button type="button" id="save-event-btn" class="save-btn">Apply Countdown</button>
+                </div>
+            </details>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="../assets/js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--bg);
+}
+
+.prayer-container {
+    width: 100%;
+    max-width: 380px;
+}
+
+.prayer-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px 24px;
+    box-shadow: var(--shadow);
+    transition: all var(--transition);
+}
+
+.prayer-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-lg);
+}
+
+.prayer-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prayer-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.prayer-badge svg {
+    width: 16px;
+    height: 16px;
+    color: var(--accent);
+}
+
+.change-city-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: var(--radius-sm);
+    display: grid;
+    place-items: center;
+    color: var(--text-secondary);
+    background: var(--surface-subtle);
+    border: 1px solid var(--border-subtle);
+    transition: all var(--transition-fast);
+}
+
+.change-city-btn:hover {
+    color: var(--text);
+    background: var(--hover);
+}
+
+.change-city-btn svg {
+    width: 14px;
+    height: 14px;
+}
+
+.hijri-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin: 4px 0 16px;
+}
+
+/* Next Prayer Hero */
+.next-prayer-banner {
+    background: var(--text);
+    color: var(--bg);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+.next-label {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    opacity: 0.75;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.next-highlight-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.next-prayer-name {
+    font-family: "Plus Jakarta Sans", "Manrope", sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1;
+}
+
+.next-prayer-time {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.next-countdown {
+    font-size: 11px;
+    font-weight: 600;
+    opacity: 0.85;
+    margin-top: 6px;
+}
+
+/* Prayers List */
+.prayers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.prayer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    background: var(--surface-subtle);
+    border: 1px solid var(--border-subtle);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    transition: all var(--transition-fast);
+}
+
+.prayer-row.active {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.prayer-time {
+    font-variant-numeric: tabular-nums;
+}

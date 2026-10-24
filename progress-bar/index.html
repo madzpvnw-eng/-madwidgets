@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal Progress Bar — Notion Widget</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="widget-toolbar">
+        <div class="widget-toolbar-left">
+            <a href="../index.html" class="toolbar-btn">← MadWidgets</a>
+        </div>
+        <div class="widget-toolbar-right">
+            <button class="toolbar-btn copy-embed-btn" onclick="copyNotionEmbedUrl()">
+                <i data-lucide="share-2"></i>
+                <span class="label-text">Copy Embed</span>
+            </button>
+            <button id="theme-toggle" class="toolbar-btn theme-toggle" aria-label="Switch theme">☾</button>
+        </div>
+    </div>
+
+    <main class="prog-container">
+        <div class="prog-card">
+            <div class="prog-head">
+                <input type="text" id="goal-title-input" class="goal-title-input" value="Read 50 Books in 2026">
+                <span id="progressPercent" class="pct-badge">0%</span>
+            </div>
+
+            <!-- Main Progress Bar -->
+            <div class="main-bar-wrapper">
+                <div id="progressBar" class="main-bar-fill"></div>
+            </div>
+
+            <!-- Stats & Quick Increments -->
+            <div class="prog-stats-row">
+                <div class="stat-box">
+                    <span class="stat-label">Current</span>
+                    <strong id="currentValue" class="stat-val">28</strong>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Target</span>
+                    <strong id="targetValue" class="stat-val">50</strong>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Remaining</span>
+                    <strong id="remainingValue" class="stat-val">22</strong>
+                </div>
+            </div>
+
+            <!-- Step controls -->
+            <div class="step-buttons">
+                <button type="button" class="step-btn" id="plus1-btn">+ 1</button>
+                <button type="button" class="step-btn" id="plus5-btn">+ 5</button>
+                <button type="button" class="step-btn" id="minus1-btn">− 1</button>
+                <button type="button" class="step-btn secondary" id="edit-goal-btn">Edit Goal</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="../assets/js/theme.js"></script>
+</body>
+</html>

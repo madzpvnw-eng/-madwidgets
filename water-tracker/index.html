@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Intake — Notion Widget</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="widget-toolbar">
+        <div class="widget-toolbar-left">
+            <a href="../index.html" class="toolbar-btn">← MadWidgets</a>
+        </div>
+        <div class="widget-toolbar-right">
+            <button class="toolbar-btn copy-embed-btn" onclick="copyNotionEmbedUrl()">
+                <i data-lucide="share-2"></i>
+                <span class="label-text">Copy Embed</span>
+            </button>
+            <button id="theme-toggle" class="toolbar-btn theme-toggle" aria-label="Switch theme">☾</button>
+        </div>
+    </div>
+
+    <main class="water-container">
+        <div class="water-card">
+            <div class="water-head">
+                <div>
+                    <h1 class="water-title">Daily Hydration</h1>
+                    <span id="intake-subtitle" class="water-subtitle">1,500 / 2,000 ml (75%)</span>
+                </div>
+                <div class="water-badge">
+                    <i data-lucide="droplet"></i>
+                    <span id="glasses-count">6 / 8</span>
+                </div>
+            </div>
+
+            <!-- Visual Cup Glass Grid -->
+            <div class="glasses-grid" id="glasses-grid"></div>
+
+            <!-- Big Liquid Fill Bar -->
+            <div class="water-meter">
+                <div id="water-fill" class="water-fill"></div>
+            </div>
+
+            <!-- Quick Add Tools -->
+            <div class="water-tools">
+                <button type="button" id="add-glass-btn" class="water-btn primary">+ 1 Glass (250ml)</button>
+                <button type="button" id="minus-glass-btn" class="water-btn secondary">− 1</button>
+                <button type="button" id="reset-water-btn" class="water-btn secondary">Reset</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="../assets/js/theme.js"></script>
+</body>
+</html>

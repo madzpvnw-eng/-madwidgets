@@ -1,0 +1,143 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--bg);
+}
+
+.prog-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+.prog-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    box-shadow: var(--shadow);
+    transition: all var(--transition);
+}
+
+.prog-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-lg);
+}
+
+.prog-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.goal-title-input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-family: "Plus Jakarta Sans", "Manrope", sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--text);
+    padding: 4px 6px;
+    border-radius: var(--radius-sm);
+    flex: 1;
+    transition: background var(--transition-fast);
+}
+
+.goal-title-input:hover, .goal-title-input:focus {
+    background: var(--surface-subtle);
+}
+
+.pct-badge {
+    padding: 3px 9px;
+    border-radius: var(--radius-full);
+    background: var(--text);
+    color: var(--bg);
+    font-size: 12px;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+}
+
+.main-bar-wrapper {
+    height: 10px;
+    background: var(--surface-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.main-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--text);
+    border-radius: var(--radius-full);
+    transition: width 0.4s ease;
+}
+
+.prog-stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.stat-box {
+    background: var(--surface-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 10px 8px;
+    text-align: center;
+}
+
+.stat-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+}
+
+.stat-val {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+}
+
+.step-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.step-btn {
+    flex: 1;
+    height: 38px;
+    border-radius: var(--radius-sm);
+    background: var(--surface-subtle);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 700;
+    transition: all var(--transition-fast);
+}
+
+.step-btn:hover {
+    background: var(--hover);
+    border-color: var(--border-hover);
+    transform: translateY(-1px);
+}
+
+.step-btn.secondary {
+    flex: 1.5;
+    background: var(--text);
+    color: var(--bg);
+    border-color: var(--text);
+}

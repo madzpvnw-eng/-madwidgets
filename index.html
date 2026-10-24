@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MadWidgets — Notion Widgets</title>
+    <meta name="description" content="Simple, useful widgets designed for your Notion workspace.">
+    <meta property="og:title" content="MadWidgets — Notion Widgets">
+    <meta property="og:description" content="Simple, useful widgets designed for your Notion workspace.">
+    <meta name="theme-color" content="#FFFFFF">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <a class="brand" href="./" aria-label="MadWidgets home">
+                <span class="brand-mark">M</span>
+                <span>madwidgets</span>
+            </a>
+            <nav class="nav" aria-label="Main navigation">
+                <a href="#widgets">Widgets</a>
+                <a href="#about">About</a>
+                <a href="https://github.com/madzpvnw-eng/madwidgets" target="_blank" rel="noopener">GitHub</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme"></button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-badge"><i></i> 23 Aesthetic Notion Widgets · Live & Embeddable</div>
+                <h1>Minimal widgets for your dream Notion setup.</h1>
+                <p>Clean, distraction-free widgets crafted to seamlessly embed into your Notion workspace. Pick any widget, customize options, and copy the embed URL.</p>
+                <div class="search-wrap">
+                    <label class="search" for="widget-search">
+                        <i data-lucide="search"></i>
+                        <input id="widget-search" type="search" placeholder="Search widgets (e.g. clock, pomodoro, weather, habit)..." autocomplete="off">
+                        <kbd>/</kbd>
+                    </label>
+                </div>
+            </section>
+
+            <section class="filters" aria-label="Widget categories">
+                <button class="filter active" data-category="all">All</button>
+                <button class="filter" data-category="time">Time</button>
+                <button class="filter" data-category="productivity">Productivity</button>
+                <button class="filter" data-category="planner">Planner</button>
+                <button class="filter" data-category="utility">Utility</button>
+                <button class="filter" data-category="inspiration">Inspiration</button>
+            </section>
+
+            <section id="widgets" class="collection">
+                <div class="section-head">
+                    <div>
+                        <h2>Widget collection</h2>
+                        <p>Choose a widget to open its dedicated page.</p>
+                    </div>
+                    <span id="widget-count">13 widgets</span>
+                </div>
+                <div class="widget-grid" id="widget-grid"></div>
+                <div id="empty-state" class="empty-state" hidden>
+                    <i data-lucide="search-x"></i>
+                    <strong>No widgets found</strong>
+                    <span>Try another search or category.</span>
+                </div>
+            </section>
+
+            <section id="about" class="about">
+                <div>
+                    <div class="eyebrow">About MadWidgets</div>
+                    <h2>Small tools. Less distraction.</h2>
+                </div>
+                <p>MadWidgets is a collection of lightweight widgets made to add useful information and small moments of utility to your Notion workspace without making the page feel crowded.</p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <span>madwidgets</span>
+            <span>Simple tools for your Notion.</span>
+            <span>© 2026 Mad</span>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/widgets.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

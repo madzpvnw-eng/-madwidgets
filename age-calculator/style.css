@@ -1,0 +1,149 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--bg);
+}
+
+.age-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.age-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    box-shadow: var(--shadow);
+    transition: all var(--transition);
+}
+
+.age-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-lg);
+}
+
+.age-head {
+    margin-bottom: 20px;
+}
+
+.age-title {
+    font-family: "Plus Jakarta Sans", "Manrope", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    margin: 0;
+}
+
+.age-sub {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    display: block;
+    margin-top: 3px;
+}
+
+.dob-input-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.dob-input {
+    height: 40px;
+    border: 1px solid var(--border);
+    background: var(--surface-subtle);
+    color: var(--text);
+    border-radius: var(--radius-sm);
+    padding: 0 12px;
+    font-size: 13px;
+    font-weight: 500;
+    outline: none;
+    transition: all var(--transition-fast);
+}
+
+.dob-input:focus {
+    border-color: var(--text);
+    background: var(--surface);
+}
+
+.calc-btn {
+    height: 40px;
+    background: var(--text);
+    color: var(--bg);
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: 700;
+    transition: all var(--transition-fast);
+}
+
+.calc-btn:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+}
+
+/* Result Hero */
+.age-result-hero {
+    background: var(--surface-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 18px 16px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.hero-age-val {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+}
+
+.hero-age-detail {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-top: 8px;
+}
+
+/* 3 Stat Grid */
+.age-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.age-stat-item {
+    background: var(--surface-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 10px 4px;
+    text-align: center;
+}
+
+.age-stat-item .label {
+    display: block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 3px;
+}
+
+.age-stat-item strong {
+    display: block;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life & Year Progress — Notion Widget</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="widget-toolbar">
+        <div class="widget-toolbar-left">
+            <a href="../index.html" class="toolbar-btn">← MadWidgets</a>
+        </div>
+        <div class="widget-toolbar-right">
+            <button class="toolbar-btn copy-embed-btn" onclick="copyNotionEmbedUrl()">
+                <i data-lucide="share-2"></i>
+                <span class="label-text">Copy Embed</span>
+            </button>
+            <button id="theme-toggle" class="toolbar-btn theme-toggle" aria-label="Switch theme">☾</button>
+        </div>
+    </div>
+
+    <main class="life-container">
+        <div class="life-card">
+            <!-- Year Progress Section -->
+            <div class="progress-section">
+                <div class="section-title-row">
+                    <span class="section-label">YEAR 2026</span>
+                    <strong id="year-percent" class="pct-text">81.4%</strong>
+                </div>
+                <div class="prog-bar">
+                    <div id="year-bar" class="prog-fill" style="width: 81.4%"></div>
+                </div>
+                <div class="meta-row">
+                    <span id="year-days-left">68 days remaining in 2026</span>
+                </div>
+            </div>
+
+            <!-- Life Progress Section -->
+            <div class="progress-section life-section">
+                <div class="section-title-row">
+                    <span class="section-label">LIFE PROGRESS</span>
+                    <strong id="progressPercent" class="pct-text">24.0%</strong>
+                </div>
+                <div class="prog-bar">
+                    <div id="progressBar" class="prog-fill" style="width: 24%"></div>
+                </div>
+                <div class="meta-row">
+                    <span id="age" class="age-text">24 Years Old</span>
+                    <span id="days-lived">8,760 days lived</span>
+                </div>
+            </div>
+
+            <!-- Settings / Birthday Input -->
+            <details class="birthday-details">
+                <summary class="birthday-summary">
+                    <i data-lucide="cake"></i>
+                    <span>Set Birthday & Lifespan</span>
+                </summary>
+                <div class="birthday-form">
+                    <div class="form-row">
+                        <label for="birthday">Birthday</label>
+                        <input type="date" id="birthday" value="2002-01-01">
+                    </div>
+                    <div class="form-row">
+                        <label for="lifespan">Expected Lifespan</label>
+                        <input type="number" id="lifespan" value="85" min="40" max="120">
+                    </div>
+                    <button type="button" id="saveBtn" class="save-btn">Update Progress</button>
+                </div>
+            </details>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="../assets/js/theme.js"></script>
+</body>
+</html>

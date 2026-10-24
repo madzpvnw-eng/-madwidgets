@@ -1,0 +1,200 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--bg);
+}
+
+.flip-clock-wrapper {
+    width: 100%;
+    max-width: 480px;
+}
+
+.flip-clock-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    box-shadow: var(--shadow);
+    transition: all var(--transition);
+}
+
+.flip-clock-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-lg);
+}
+
+.flip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.brand-tag {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    color: var(--text-secondary);
+}
+
+.flip-options {
+    display: flex;
+    gap: 6px;
+}
+
+.flip-btn {
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    background: var(--surface-subtle);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.flip-btn.active {
+    background: var(--text);
+    color: var(--bg);
+    border-color: var(--text);
+}
+
+/* Flip Stage */
+.flip-stage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.flip-dots {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--text-muted);
+    padding-bottom: 22px;
+}
+
+.flip-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.flip-flap {
+    position: relative;
+    width: 90px;
+    height: 105px;
+    perspective: 300px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.flap-half {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50%;
+    overflow: hidden;
+    background: var(--text);
+    color: var(--bg);
+    display: flex;
+    justify-content: center;
+    font-family: "Plus Jakarta Sans", "Manrope", sans-serif;
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 105px;
+    font-variant-numeric: tabular-nums;
+    backface-visibility: hidden;
+}
+
+.flap-top {
+    top: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    background: var(--text);
+}
+
+.flap-bottom {
+    bottom: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    align-items: flex-end;
+    background: var(--text);
+    filter: brightness(0.92);
+}
+
+.flap-divider {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1.5px;
+    background: var(--bg);
+    z-index: 10;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtle flip keyframe */
+.flip-flap.flipping .flap-top {
+    animation: flipDown 0.3s ease-in forwards;
+}
+
+@keyframes flipDown {
+    0% { transform: rotateX(0deg); }
+    100% { transform: rotateX(-90deg); }
+}
+
+.unit-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+}
+
+.flip-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.ampm-indicator {
+    padding: 2px 7px;
+    border-radius: var(--radius-sm);
+    background: var(--text);
+    color: var(--bg);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+}
+
+.flip-date {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 440px) {
+    .flip-flap {
+        width: 72px;
+        height: 84px;
+    }
+    .flap-half {
+        font-size: 40px;
+        line-height: 84px;
+    }
+    .flip-dots {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,148 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--bg);
+}
+
+.diff-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.diff-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    box-shadow: var(--shadow);
+    transition: all var(--transition);
+}
+
+.diff-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-lg);
+}
+
+.diff-head {
+    margin-bottom: 20px;
+}
+
+.diff-title {
+    font-family: "Plus Jakarta Sans", "Manrope", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    margin: 0;
+}
+
+.diff-sub {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    display: block;
+    margin-top: 3px;
+}
+
+.dates-inputs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.date-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.date-field label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+}
+
+.date-input {
+    height: 40px;
+    border: 1px solid var(--border);
+    background: var(--surface-subtle);
+    color: var(--text);
+    border-radius: var(--radius-sm);
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: 600;
+    outline: none;
+    transition: all var(--transition-fast);
+}
+
+.date-input:focus {
+    border-color: var(--text);
+    background: var(--surface);
+}
+
+/* Result Hero */
+.diff-result-hero {
+    background: var(--surface-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 18px 16px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.hero-diff-val {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+}
+
+.hero-diff-detail {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-top: 8px;
+}
+
+/* 3 Stat Grid */
+.diff-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.diff-stat-item {
+    background: var(--surface-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 10px 4px;
+    text-align: center;
+}
+
+.diff-stat-item .label {
+    display: block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 3px;
+}
+
+.diff-stat-item strong {
+    display: block;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+}
