@@ -216,6 +216,19 @@ body:hover .widget-toolbar:focus-within {
     height: 12px;
 }
 
+.toolbar-brand-icon {
+    width: 13px;
+    height: 13px;
+    border-radius: 3px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+[data-theme="dark"] .toolbar-brand-icon {
+    filter: invert(1);
+    mix-blend-mode: screen;
+}
+
 /* In embed mode (inside Notion iframe with ?embed=true) */
 body.is-embedded {
     padding: 8px;

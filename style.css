@@ -12,29 +12,60 @@ body { min-height: 100vh; }
 .brand { 
     display: flex; 
     align-items: center; 
-    gap: 8px; 
+    gap: 9px; 
+    text-decoration: none;
 }
-.brand-mark { 
-    width: 24px; 
-    height: 24px; 
-    border: 1px solid var(--border-hover); 
+.brand-logo { 
+    width: 26px; 
+    height: 26px; 
     border-radius: 6px; 
-    display: grid; 
-    place-items: center; 
-    font-size: 11px; 
-    font-weight: 700; 
-    color: var(--text);
+    object-fit: contain; 
+    mix-blend-mode: multiply;
+    transition: transform var(--transition-fast), filter var(--transition-fast);
 }
+.brand:hover .brand-logo {
+    transform: scale(1.08);
+}
+[data-theme="dark"] .brand-logo,
+[data-theme="dark"] .hero-logo,
+[data-theme="dark"] .footer-logo,
+[data-theme="dark"] .toolbar-brand-icon {
+    filter: invert(1);
+    mix-blend-mode: screen;
+}
+.header a.brand > span,
 .header a.brand > span:nth-of-type(2),
 div:nth-of-type(1) > header:nth-of-type(1) > a:nth-of-type(1) > span:nth-of-type(2) { 
     font-size: 13px; 
-    font-weight: 600; 
-    letter-spacing: -0.01em; 
+    font-weight: 700; 
+    letter-spacing: -0.02em; 
     color: var(--text-secondary); 
     transition: color var(--transition-fast);
 }
+.brand:hover span,
 .brand:hover span:nth-of-type(2) {
     color: var(--text);
+}
+.hero-logo-wrap {
+    margin: 0 auto 16px;
+    display: inline-flex;
+    padding: 8px;
+    border-radius: 16px;
+    background: var(--surface);
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition);
+}
+.hero-logo-wrap:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+.hero-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    border-radius: 10px;
 }
 .nav, div:nth-of-type(1) > header:nth-of-type(1) > nav:nth-of-type(1) { 
     display: flex; 
@@ -213,7 +244,9 @@ div:nth-of-type(1) > header:nth-of-type(1) > a:nth-of-type(1) > span:nth-of-type
 .about h2 { font-size: 24px; letter-spacing: -0.04em; margin: 0; font-weight: 800; }
 .about p { margin: 0; color: var(--text-secondary); font-size: 13px; line-height: 1.8; max-width: 520px; }
 
-.footer { margin-top: 40px; border-top: 1px solid var(--border); padding-top: 24px; display: flex; justify-content: space-between; color: var(--text-secondary); font-size: 12px; }
+.footer { margin-top: 40px; border-top: 1px solid var(--border); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; color: var(--text-secondary); font-size: 12px; }
+.footer-left { display: flex; align-items: center; gap: 8px; }
+.footer-logo { width: 20px; height: 20px; border-radius: 4px; object-fit: contain; mix-blend-mode: multiply; }
 .footer span:first-child { color: var(--text); font-weight: 700; }
 
 @media (max-width: 960px) {

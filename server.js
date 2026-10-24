@@ -9,10 +9,11 @@ const app = express();
 const PORT = Number(process.env.PORT) || 3000;
 const HOST = '0.0.0.0';
 
-// Serve static files from workspace root
+// Serve static files from workspace root and public folder
 app.use(express.static(__dirname, {
   extensions: ['html', 'htm']
 }));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Route for root
 app.get('/', (req, res) => {

@@ -188,9 +188,7 @@ function enhanceToolbar() {
     if (backLink) {
         if (!backLink.classList.contains("toolbar-btn")) backLink.classList.add("toolbar-btn");
         backLink.title = "Return to MadWidgets";
-        backLink.innerHTML = window.lucide 
-            ? `<i data-lucide="arrow-left"></i><span class="label-text">Widgets</span>`
-            : `← <span class="label-text">Widgets</span>`;
+        backLink.innerHTML = `<img src="../assets/img/logo.png" class="toolbar-brand-icon" alt="" width="14" height="14"><span class="label-text">Widgets</span>`;
     }
 
     if (window.lucide && typeof window.lucide.createIcons === "function") {
